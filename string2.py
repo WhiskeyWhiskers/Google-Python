@@ -45,7 +45,6 @@ def not_bad(s):
 
 
 
-
 # F. front_back
 # Consider dividing a string into two halves.
 # If the length is even, the front and back halves are the same length.
@@ -54,8 +53,17 @@ def not_bad(s):
 # Given 2 strings, a and b, return a string of the form
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
-  # +++your code here+++
-  return
+  a_big = (len(a)/2) + 3/2
+  b_big = (len(b)/2) + 3/2
+  if len(a)%2 == 0:
+    first_part, second_part = a[:len(a)/2] , a[len(a)/2:]
+  else:
+    first_part, second_part = a[:a_big], a[a_big:]
+  if len(b)%2 == 0:
+    third_part, fourth_part = b[:len(b)/2] , b[len(b)/2:]
+  else:
+    third_part, fourth_part = b[:b_big], b[b_big:]
+  print first_part, third_part, second_part, fourth_part
 
 
 # Simple provided test() function used in main() to print
