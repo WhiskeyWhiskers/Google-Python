@@ -15,6 +15,15 @@
 # It's ok if you do not complete all the functions, and there
 # are some additional functions to try in list2.py.
 
+
+# Sample Lists for use in Terminal
+
+sports = ['hockey', 'soccer', 'baseball', 'tennis', 'ping pong', 'basketball', 'football', 'racing', 'badminton']
+names = ['sally', 'marry', 'bob', 'Elise', 'Victoria', 'Yael', 'Asa']
+sandwich = ['bob', 'sos', 'mom', 'dad','wildcard', 'joker', 'cac', 'miscellaneous', 'huh']
+misc = ['ballon', 'xyz', 'tape', 'xenith', 'princess', 'warrior', 'xena', 'jump', 'apex', 'xi']
+tupples = [(3, 5, 8), (1, 2, 5, 9), (9, 8, 1, 1), (3, 1), (3, 3), (1, 2)] 
+
 # A. match_ends
 # Given a list of strings, return the count of the number of
 # strings where the string length is 2 or more and the first
@@ -35,10 +44,15 @@ def match_ends(words):
 # Hint: this can be done by making 2 lists and sorting each of them
 # before combining them.
 def front_x(words):
-  # +++your code here+++
-  return
-
-
+   xs = []
+   for x in words:
+    if x.startswith('x'):
+      xs.append(x)
+      words.remove(x)
+   words.sort()
+   xs.sort()
+   front_x = xs + words
+   print front_x
 
 # C. sort_last
 # Given a list of non-empty tuples, return a list sorted in increasing
@@ -46,10 +60,11 @@ def front_x(words):
 # e.g. [(1, 7), (1, 3), (3, 4, 5), (2, 2)] yields
 # [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
 # Hint: use a custom key= function to extract the last element form each tuple.
-def sort_last(tuples):
-  # +++your code here+++
-  return
+def last(a):
+  return a[-1]
 
+def sort_last(tuples):
+  return sorted (tuples, key=last)
 
 # Simple provided test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
