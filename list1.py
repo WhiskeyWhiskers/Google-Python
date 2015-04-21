@@ -32,7 +32,7 @@ tupples = [(3, 5, 8), (1, 2, 5, 9), (9, 8, 1, 1), (3, 1), (3, 3), (1, 2)]
 def match_ends(words):
   i = 0
   for w in words:
-    if w >= 2 and w[0] == w[-1]:
+    if len(w) >= 2 and w[0] == w[-1]:
       i = i + 1
   print i
 
@@ -44,15 +44,11 @@ def match_ends(words):
 # Hint: this can be done by making 2 lists and sorting each of them
 # before combining them.
 def front_x(words):
-   xs = []
-   for x in words:
-    if x.startswith('x'):
-      xs.append(x)
-      words.remove(x)
-   words.sort()
-   xs.sort()
-   front_x = xs + words
-   print front_x
+    all_x_words = filter(lambda e: e.startswith("x"), words)
+    rest = filter(lambda e: not e.startswith("x"), words)
+    all_x_words.sort()
+    rest.sort()
+    return all_x_words + rest
 
 # C. sort_last
 # Given a list of non-empty tuples, return a list sorted in increasing
