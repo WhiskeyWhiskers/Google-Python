@@ -24,8 +24,11 @@
 # So donuts(5) returns 'Number of donuts: 5'
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
-  # +++your code here+++
-  return
+  if count >= 10:
+      result = "many"
+  else:
+      result = count
+  print ("Number of donuts: ") + str(result)
 
 
 # B. both_ends
@@ -34,8 +37,11 @@ def donuts(count):
 # so 'spring' yields 'spng'. However, if the string length
 # is less than 2, return instead the empty string.
 def both_ends(s):
-  # +++your code here+++
-  return
+  if len(s) > 2:
+      result = s[0:2]+s[-2:]
+  else:
+      result = ''
+  print (result)
 
 
 # C. fix_start
@@ -52,9 +58,7 @@ def fix_start(s):
     breaks = s.replace(key, "*")
     delete = breaks[1:]
     fix = key + delete
-    print fix
-  return
-
+    print (fix)
 
 # D. MixUp
 # Given strings a and b, return a single string with a and b separated
@@ -64,9 +68,12 @@ def fix_start(s):
 #   'dog', 'dinner' -> 'dig donner'
 # Assume a and b are length 2 or more.
 def mix_up(a, b):
-  # +++your code here+++
-  return
-
+  if len(a) >=2 and len(b) >=2:
+    c = b[0:2] + a[2:]
+    d = a[0:2] + b[2:]
+    print (c + ' ' + d)
+  else:
+    return ('Your words are too short.')
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
