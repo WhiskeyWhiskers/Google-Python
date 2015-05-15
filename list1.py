@@ -22,7 +22,7 @@ sports = ['hockey', 'soccer', 'baseball', 'tennis', 'ping pong', 'basketball', '
 names = ['sally', 'marry', 'bob', 'Elise', 'Victoria', 'Yael', 'Asa']
 sandwich = ['bob', 'sos', 'mom', 'dad','wildcard', 'joker', 'cac', 'miscellaneous', 'huh']
 misc = ['ballon', 'xyz', 'tape', 'xenith', 'princess', 'warrior', 'xena', 'jump', 'apex', 'xi']
-tupples = [(3, 5, 8), (1, 2, 5, 9), (9, 8, 1, 1), (3, 1), (3, 3), (1, 2)] 
+tuples = [(3, 5, 8), (1, 2, 5, 9), (9, 8, 1, 1), (3, 1), (3, 3), (1, 2)]
 
 # A. match_ends
 # Given a list of strings, return the count of the number of
