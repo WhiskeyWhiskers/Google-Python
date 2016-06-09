@@ -15,9 +15,6 @@
 # It's ok if you do not complete all the functions, and there
 # are some additional functions to try in list2.py.
 
-
-# THIS IS A TEST
-
 # Sample Lists for use in Terminal
 
 sports = ['hockey', 'soccer', 'baseball', 'tennis', 'ping pong', 'basketball', 'football', 'racing', 'badminton']
